@@ -6,7 +6,11 @@
     display: flex;
     align-items: flex-start ;
 }
-
+.introduce{
+    position: relative;
+    display: block;
+    align-items:flex-start;
+}
 .mission-block{
    height: 400px;
    width: 800px; 
@@ -16,7 +20,7 @@
 margin-top: 3%;
     color: #dbce14;
     margin-left: 10%;
-    position: absolute;
+    
 }
 
 .navigation{
@@ -102,6 +106,7 @@ p {
 }
 
 .desc-img{
+    float: left;
 height: fit-content;
 width: 80%;
 }
