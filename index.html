@@ -5,18 +5,21 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1"> 
+     <link rel="stylesheet" href="normalize.css">
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     
     <title >СочиИнТех</title>
 </head>
-<body class="bg-dark">
+<body class="bg-dark" >
  
 
     
 
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  
   
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid">
@@ -38,11 +41,11 @@
                 <a class="nav-link" href="#">Контакты</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="order.html">Оставить заявку</a>
+                <a class="nav-link" href="order.php">Оставить заявку</a>
               </li>
               <li><div class="btn-group dropend">
                 
-                <a class="btn nav-link" type="button" href="shop.html" > <i class="fa-solid fa-cart-shopping fa-fade fa-lg"></i>Магазин</a> <!-- ссылка на магазин -->
+                <a class="btn nav-link" type="button" href="shop.php" > <i class="fa-solid fa-cart-shopping fa-fade fa-lg"></i>Магазин</a> <!-- ссылка на магазин -->
             
                 <button type="button" class="btn nav-link  dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="visually-hidden">Toggle Dropdown</span>
@@ -62,10 +65,12 @@
           </div>
         </div>
       </nav> <!-- конец нав бара --> 
-    <div class="container block-carousel" >
-        <h2 class="text-center ">Мы рады предложить Вам наши услуги!</h2>
+    <section>
+    <div class="container block-carousel w-75 "  >
+        <h2 class="whiteText text-center p-3  ">Мы рады предложить Вам наши услуги!</h2>
         
-      <div class="container-fluid main-carousel">
+        
+      <div class="container-fluid main-carousel  ">
        
         <div id="carouselExample" class="carousel  slide " data-bs-ride="carousel"
             data-bs-interval="5000">
@@ -76,16 +81,16 @@
             <img src="images/carouselCCTV.jpg" class=" w-100 h-sm-200 h-400" alt="...">
             <div class="carousel-caption  ">
                 <h5>Установка систем видео наблюдения</h5>
-                <a class="btn btn-primary fs-lg-2 fs-sm-4 " href="#" role="button">Оставить заявку</a>
+                <a class="btn btn-primary fs-lg-2 fs-sm-4 " href="order.php" role="button">Оставить заявку</a>
             </div>
            
           </div>
 
           <div class="carousel-item">
-            <img src="images/carouselWebDevelopment.jpg" class=" w-100" alt="...">
+            <img src="images/carouselWebDevelopment.jpg" class=" w-100 h-sm-200 h-400" alt="...">
             <div class="carousel-caption ">
                 <h5>Разработка веб-сайтов</h5>
-                <a class="btn btn-primary" href="#" role="button">Оставить заявку</a>    
+                <a class="btn btn-primary" href="order.php" role="button">Оставить заявку</a>    
             </div>
 
         </div>
@@ -103,6 +108,36 @@
        </div>
     </div>
 </div>
+    </section>
+<section>
+<div class="container aboutText container-fluid p-3 bg-white w-sm-25 w-75 ">
+  <h2 class="text text-color-white" >О компании:</h2>
+  <p class="text">О компании:
+    ООО «Сочинские информационные технологии» на протяжении 14 лет занимается внедрением передовых информационных технологий, разработкой оригинальных заказных технологических решений, обусловленных спецификой конкретных предприятий.
+    
+    Наша компания имеет статус «1С:ФРАНЧАЙЗИНГ», сотрудники имеют сертификаты «1С», мы продаем весь спектр продуктов «1С».
+    
+    Так же осуществляем комплексное информационное обслуживание предприятий , включая подбор и конфигурирование программ и вычислительной техники , установку , внедрение , сопровождение , профилактику , консультирование и ремонт .
+    
+    Наша компания активно внедряет системы автоматизации ресторанов и магазинов.
+    
+    Мы также создаем сайты для интернет-магазинов , гостиниц и турагенств.
+    
+    Одним из направлений нашей деятельности является установка систем видеонаблюдения и охранной сигнализации.
+    
+    Мы решаем любые проблемы с вашими компьютерами — восстанавливаем данные , лечим от вирусов , меняем вышедшие из строя детали. Если вам нужна новая техника — ознакомьтесь с ценами в нашем интернет-магазине — они ниже , чем розничные в нашем городе.</p>
+</div>
+<h2 class="whiteText text-center p-5 ">«Сочинтех» — доступное обслуживание для всех!</h1>
+</section>
+
+<section class="container ads w-75 bg-light d-none d-md-block d-xl-block d-xxl-block">
+    <div class="text text-center fs-1">Наши партнеры </div>
+    <div class="">DevLine – один из известнейших российских разработчиков программного продукта для систем аналогового, TVI-, AHD-, CVI-, и IP-видеонаблюдения. Компания основана в 2004 году в Краснодаре.
+  Дилерская сеть компании состоит более чем из трехсот партнеров в таких крупных городах, как Москва, Санкт-Петербург, Екатеринбург, Новосибирск и других. Компании-партнеры, представляющие систему видеонаблюдения «Линия», работают также в Украине, Казахстане, Республике Беларусь, Армении, Азербайджане и других странах ближнего зарубежья.
+    </div > 
+    <div class="d-inline "><img   src="images/LINIAadcbannerproduct.jpg"/></div>
+    <a class="d-inline " href="https://devline.ru/buy/" ><img src="images/LINIAadsbannerButton.png"/></a>
+</section>
 </body>
 </html>
 </doctype>

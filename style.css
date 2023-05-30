@@ -6,6 +6,12 @@
 body{
     margin: 5px;
 }
+.container {     
+    width: 100%;     
+    max-width: 1200px;     
+    margin: auto; 
+}
+
 ol{
     list-style-type: disc;
     border: 3px gray;
@@ -14,6 +20,7 @@ ol{
     margin: 30px;
 }
 /* Carousel */
+
 .main-carousel{
     padding: 0;
    
@@ -30,8 +37,15 @@ ol{
 } 
 
 /* Carousel */
-
-
+.aboutText{
+    color: black;
+}
+.whiteText{
+    color: white;
+}
+section{
+    margin: 1%;
+}
 /*1c_suport_page*/
 
 .support_information_blog{

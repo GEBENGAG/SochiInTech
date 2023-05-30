@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,19 +10,64 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     
-    <title >СочиИнТех</title>
+    <title>СочиИнТех</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
-<body class="bg-dark mb-5">
-  
-  <?php
-    include "database.php";
-    $result = mysqli_query($induction,"select * from "товары");
-
-    while ($)
- ?>
+<body class="bg-dark mb-5"> 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
- 
+  <script> window.addEventListener('load',function(){
+     
+     <?php
+      $connection = mysqli_connect('localhost','admin','admin','test');
+      $i=1;
+      $sql   = mysqli_query($connection,"SELECT COUNT(goods_id) FROM Goods");
+      $row = $sql -> fetch_row();
+      $count = (int)$row[0];
+    
+      $i=1;
+      
+
+
+     ?>
+     
+    
+    
+     for(let i=0; i < <?php echo $count;?> ;i++) {
+      
+    <?php
+            
+      $data = mysqli_fetch_array(mysqli_query($connection,"SELECT * FROM Goods"));
+      
+      
+      $i++;
+      ?>   
+      
+     
+      let price = "<?php echo $data['goods_price'];?>";
+      let name = "<?php echo $data['goods_name'];?>";
+      let description = "<?php echo $data['goods_desc'];?>";
+      
+
+      let cardmarkup = ' <div class="card m-1"   style="width: 18rem;"> <img src="" class="card-img-top" alt="..."> <div class="card-body"> <h5 class="card-title">'+name+'</h5> <p class="card-text">'+description+'</p><p class="card-text">'+price+' рублей</p> <a href="#" class="btn btn-primary">Купить</a></div>';
+    
+      document.getElementById('cardcontainer').innerHTML += cardmarkup;
+      
+      
+      }
+    
+    
+    
+    
+  });
+<?php 
+        mysqli_close($connection);
+    ?>
+ </script>
+     
+  
+
+
+   
   
   
     <nav class="navbar navbar-expand-lg navbar-dark ">
@@ -42,7 +90,7 @@
                 <a class="nav-link" href="#">Контакты</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="order.html">Оставить заявку</a>
+                <a class="nav-link " href="order.php">Оставить заявку</a>
               </li>
               <li><div class="btn-group dropend">
                 <a class="btn nav-link active" type="button" href="shop.html" > <i class="fa-solid fa-cart-shopping fa-fade fa-lg"></i>Магазин</a> <!-- ссылка на магазин -->
@@ -65,22 +113,19 @@
         </div>
       </nav> 
       
-      <section class="main-content bg-light">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-sm-6">
-              <div class="card" style="width: 18rem;">
-                <img src="" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text">Небольшой пример текста, который должен основываться на названии карточки и составлять основную часть содержимого карты.</p>
-                  <a href="#" class="btn btn-primary">Перейти куда-нибудь</a>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="container position-relative  m-3 ">
+  <button type="button position-absolute top-0 start-50"  class="btn btn-dark">1c</button>
+  <button type="button position-absolute start-25" class="btn btn-dark">Kaspersky</button>
+  <button type="button position-absolute start-0" class="btn btn-dark">Eset</button>
+  <button type="button position-absolute start-100" class="btn btn-dark">DataMobile</button>
+
+</div>
+      
+      
+        <div class="container d-flex flex-wrap bg-light height:300; " id="cardcontainer">
+           
         </div>
-      </section>
+      
 </body>
 </html>
 </doctype>
